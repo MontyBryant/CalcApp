@@ -12,9 +12,17 @@ class SecretViewController: UIViewController {
     
     @IBOutlet var catsName: UITextField!
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if catsName.text == "" || catsName.text == nil {
+            print("Error, please enter a cats name")
+            return false
+        }
+        return true
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let newVC: SecondViewController = segue.destination as! SecondViewController
-        let passedPhrase = "You named the cat: " + catsName.text!
+        let passedPhrase = "You named the cat: " + catsName.text! + "\n \n Level 1 completed... Proceed to level two?"
         newVC.recivedString = passedPhrase
         newVC.unlocked = true
     }
