@@ -106,9 +106,9 @@ class ViewController: UIViewController {
         }
     }
 
-    @IBAction func LongPress(_ sender: UILongPressGestureRecognizer) {
+    @IBAction func longPress(_ sender: UILongPressGestureRecognizer) {
         print("Secret Page Unlocked")
-        self.performSegue(withIdentifier: "segue", sender: self)
+        self.performSegue(withIdentifier: "level2SegueShort", sender: self)
     }
     
 

@@ -22,7 +22,7 @@ class SecretViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let newVC: SecondViewController = segue.destination as! SecondViewController
-        let passedPhrase = "You named the cat: " + catsName.text! + "\n \n Level 1 completed... Proceed to level two?"
+        let passedPhrase = "You named the cat: " + catsName.text! + "\n Level 1 completed... \n Proceed to level two?"
         newVC.recivedString = passedPhrase
         newVC.unlocked = true
     }

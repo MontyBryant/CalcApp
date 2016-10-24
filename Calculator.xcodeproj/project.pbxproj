@@ -16,6 +16,7 @@
 		9A7144ED1DAFE28200E7B668 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7144EC1DAFE28200E7B668 /* CalculatorUITests.swift */; };
 		9A82548B1DB67D36007EF134 /* SecretViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82548A1DB67D36007EF134 /* SecretViewController.swift */; };
 		9A82548D1DB67F47007EF134 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82548C1DB67F47007EF134 /* SecondViewController.swift */; };
+		9AD6EBCC1DBE4204000F9C23 /* Level2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EBCB1DBE4204000F9C23 /* Level2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9A7144EE1DAFE28200E7B668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A82548A1DB67D36007EF134 /* SecretViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretViewController.swift; sourceTree = "<group>"; };
 		9A82548C1DB67F47007EF134 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9AD6EBCB1DBE4204000F9C23 /* Level2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				9A7144CE1DAFE28100E7B668 /* ViewController.swift */,
 				9A82548A1DB67D36007EF134 /* SecretViewController.swift */,
 				9A82548C1DB67F47007EF134 /* SecondViewController.swift */,
+				9AD6EBCB1DBE4204000F9C23 /* Level2ViewController.swift */,
 				9A7144D31DAFE28100E7B668 /* Assets.xcassets */,
 			);
 			path = Calculator;
@@ -277,6 +280,7 @@
 				9A82548B1DB67D36007EF134 /* SecretViewController.swift in Sources */,
 				9A82548D1DB67F47007EF134 /* SecondViewController.swift in Sources */,
 				9A7144CD1DAFE28100E7B668 /* AppDelegate.swift in Sources */,
+				9AD6EBCC1DBE4204000F9C23 /* Level2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
