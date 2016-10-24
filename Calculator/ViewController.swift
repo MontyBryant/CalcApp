@@ -54,15 +54,19 @@ class ViewController: UIViewController {
         case "+":
             symbol = 0
             display.text = "0"
+            decimal = true
         case "-":
             symbol = 1
             display.text = "0"
+            decimal = true
         case "x":
             symbol = 2
             display.text = "0"
+            decimal = true
         case "÷":
             symbol = 3
             display.text = "0"
+            decimal = true
         case ".":
             if decimal == true{
                 symbol = 4
@@ -91,7 +95,7 @@ class ViewController: UIViewController {
         }else{
             num2 = displayValue
             userIsTyping = false
-            decimal = true
+            decimal = false
             switch symbol {
             case 0: displayValue = num1 + num2
             case 1: displayValue = num1 - num2
