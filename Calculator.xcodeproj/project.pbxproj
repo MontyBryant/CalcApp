@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A17A6A51DC0C3CB00DAC712 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A17A6A41DC0C3CB00DAC712 /* Card.swift */; };
+		9A17A6A71DC0C3D900DAC712 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A17A6A61DC0C3D900DAC712 /* Deck.swift */; };
 		9A7144CD1DAFE28100E7B668 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7144CC1DAFE28100E7B668 /* AppDelegate.swift */; };
 		9A7144CF1DAFE28100E7B668 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7144CE1DAFE28100E7B668 /* ViewController.swift */; };
 		9A7144D21DAFE28100E7B668 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7144D01DAFE28100E7B668 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A17A6A41DC0C3CB00DAC712 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		9A17A6A61DC0C3D900DAC712 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		9A7144C91DAFE28100E7B668 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7144CC1DAFE28100E7B668 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A7144CE1DAFE28100E7B668 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				9A82548A1DB67D36007EF134 /* SecretViewController.swift */,
 				9A82548C1DB67F47007EF134 /* SecondViewController.swift */,
 				9AD6EBCB1DBE4204000F9C23 /* Level2ViewController.swift */,
+				9A17A6A61DC0C3D900DAC712 /* Deck.swift */,
+				9A17A6A41DC0C3CB00DAC712 /* Card.swift */,
 				9A7144D31DAFE28100E7B668 /* Assets.xcassets */,
 			);
 			path = Calculator;
@@ -276,7 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A17A6A71DC0C3D900DAC712 /* Deck.swift in Sources */,
 				9A7144CF1DAFE28100E7B668 /* ViewController.swift in Sources */,
+				9A17A6A51DC0C3CB00DAC712 /* Card.swift in Sources */,
 				9A82548B1DB67D36007EF134 /* SecretViewController.swift in Sources */,
 				9A82548D1DB67F47007EF134 /* SecondViewController.swift in Sources */,
 				9A7144CD1DAFE28100E7B668 /* AppDelegate.swift in Sources */,
