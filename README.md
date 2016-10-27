@@ -1,4 +1,4 @@
-This is a an app that has three different levels. 
+This is a an app that has three different levels:
 
 The first is a calculator with a ridle that if solved moves you on to the second level.
 
