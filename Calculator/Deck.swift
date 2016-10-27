@@ -17,16 +17,16 @@ class Deck {
         cards = [
             Card(imageName: "robot1"),
             Card(imageName: "robot1"),
-            Card(imageName: "robot2"),
-            Card(imageName: "robot2"),
+            Card(imageName: "yeti1"),
+            Card(imageName: "yeti1"),
             Card(imageName: "unicorn1"),
             Card(imageName: "unicorn1"),
-            Card(imageName: "unicorn2"),
-            Card(imageName: "unicorn2"),
+            Card(imageName: "dragon1"),
+            Card(imageName: "dragon1"),
             Card(imageName: "alien1"),
             Card(imageName: "alien1"),
-            Card(imageName: "alien2"),
-            Card(imageName: "alien2"),
+            Card(imageName: "mermaid1"),
+            Card(imageName: "mermaid1"),
         ]
     }
     

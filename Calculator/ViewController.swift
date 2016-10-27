@@ -90,8 +90,8 @@ class ViewController: UIViewController {
     
     @IBAction func equals(_ sender: UIButton) {
         if display.text == secretCode {
-            print("Secret Page Unlocked")
-            self.performSegue(withIdentifier: "segue", sender: self)
+            print("Level 2 Unlocked")
+            self.performSegue(withIdentifier: "level2UnlockedSegue", sender: self)
         }else{
             num2 = displayValue
             userIsTyping = false
@@ -108,9 +108,22 @@ class ViewController: UIViewController {
 
     @IBAction func longPress(_ sender: UILongPressGestureRecognizer) {
         print("Secret Page Unlocked")
-        self.performSegue(withIdentifier: "level2SegueShort", sender: self)
+        self.performSegue(withIdentifier: "level3SegueShort", sender: self)
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "infoSegue" {
+            let infoPage = segue.destination as! InfoPage
+            infoPage.passString = "Welcome to my app! \n \n The aim is to unlock and complete each level..."
+        }else if segue.identifier == "hintSegue"{
+            let infoPage = segue.destination as! InfoPage
+            infoPage.passString = "I am 6,494 days old. What is my year of birth?"
+        }else if segue.identifier == "level2UnlockedSegue"{
+            let infoPage = segue.destination as! InfoPage
+            infoPage.passString = "Level 2 Unlocked!"
+        }
+    }
 
 }
 

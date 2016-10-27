@@ -16,9 +16,9 @@
 		9A7144D71DAFE28100E7B668 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7144D51DAFE28100E7B668 /* LaunchScreen.storyboard */; };
 		9A7144E21DAFE28200E7B668 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7144E11DAFE28200E7B668 /* CalculatorTests.swift */; };
 		9A7144ED1DAFE28200E7B668 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7144EC1DAFE28200E7B668 /* CalculatorUITests.swift */; };
-		9A82548B1DB67D36007EF134 /* SecretViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82548A1DB67D36007EF134 /* SecretViewController.swift */; };
-		9A82548D1DB67F47007EF134 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82548C1DB67F47007EF134 /* SecondViewController.swift */; };
+		9A82548D1DB67F47007EF134 /* InfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82548C1DB67F47007EF134 /* InfoPage.swift */; };
 		9AD6EBCC1DBE4204000F9C23 /* Level2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6EBCB1DBE4204000F9C23 /* Level2ViewController.swift */; };
+		9AE7FC2C1DC0F9B4000607A6 /* Level3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7FC2B1DC0F9B4000607A6 /* Level3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +54,9 @@
 		9A7144E81DAFE28200E7B668 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7144EC1DAFE28200E7B668 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		9A7144EE1DAFE28200E7B668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A82548A1DB67D36007EF134 /* SecretViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecretViewController.swift; sourceTree = "<group>"; };
-		9A82548C1DB67F47007EF134 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9A82548C1DB67F47007EF134 /* InfoPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPage.swift; sourceTree = "<group>"; };
 		9AD6EBCB1DBE4204000F9C23 /* Level2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2ViewController.swift; sourceTree = "<group>"; };
+		9AE7FC2B1DC0F9B4000607A6 /* Level3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +110,9 @@
 				9A7144FA1DAFE29600E7B668 /* other */,
 				9A7144D01DAFE28100E7B668 /* Main.storyboard */,
 				9A7144CE1DAFE28100E7B668 /* ViewController.swift */,
-				9A82548A1DB67D36007EF134 /* SecretViewController.swift */,
-				9A82548C1DB67F47007EF134 /* SecondViewController.swift */,
+				9A82548C1DB67F47007EF134 /* InfoPage.swift */,
 				9AD6EBCB1DBE4204000F9C23 /* Level2ViewController.swift */,
+				9AE7FC2B1DC0F9B4000607A6 /* Level3ViewController.swift */,
 				9A17A6A61DC0C3D900DAC712 /* Deck.swift */,
 				9A17A6A41DC0C3CB00DAC712 /* Card.swift */,
 				9A7144D31DAFE28100E7B668 /* Assets.xcassets */,
@@ -285,10 +285,10 @@
 				9A17A6A71DC0C3D900DAC712 /* Deck.swift in Sources */,
 				9A7144CF1DAFE28100E7B668 /* ViewController.swift in Sources */,
 				9A17A6A51DC0C3CB00DAC712 /* Card.swift in Sources */,
-				9A82548B1DB67D36007EF134 /* SecretViewController.swift in Sources */,
-				9A82548D1DB67F47007EF134 /* SecondViewController.swift in Sources */,
+				9A82548D1DB67F47007EF134 /* InfoPage.swift in Sources */,
 				9A7144CD1DAFE28100E7B668 /* AppDelegate.swift in Sources */,
 				9AD6EBCC1DBE4204000F9C23 /* Level2ViewController.swift in Sources */,
+				9AE7FC2C1DC0F9B4000607A6 /* Level3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

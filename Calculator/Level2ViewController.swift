@@ -11,20 +11,19 @@ import UIKit
 class Level2ViewController: UIViewController {
     
     var timer = Timer()
-    var counter = 15
+    var counter = 20
     var flipCount = 0
     var imageNames:[String] = ["robot1", "robot2", "alien1", "alien2", "mermaid1", "mermaid2", "dragon1", "dragon2", "unicorn1", "unicorn2", "yeti1", "yeti2"]
     var pressed = 0
     let deck = Deck()
     
-    var score: Int = 0
+    var score: Int = 5
     
     var selectedCards = [Card]()
     
     @IBOutlet var nextButton: UIButton!
     @IBOutlet var scoreLabel: UILabel!
     @IBOutlet var cards: [UIButton]!
-    @IBOutlet var flipsLabel: UILabel!
     @IBOutlet var countingLabel: UILabel!
     
     override func viewDidLoad() {
@@ -37,12 +36,10 @@ class Level2ViewController: UIViewController {
         
         deck.shuffle()
         
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -52,11 +49,13 @@ class Level2ViewController: UIViewController {
             counter -= 1
             countingLabel.text = "\(counter)"
         }else{
-            counter = 16
-            flipAllCardsFaceDown()
-            deck.shuffle()
-            score = 0
-            scoreLabel.text = "Score: 0"
+            if score != 6 {
+                counter = 21
+                flipAllCardsFaceDown()
+                deck.shuffle()
+                score = 0
+                scoreLabel.text = "Score: 0"
+            }
 
         }
     }
@@ -64,22 +63,18 @@ class Level2ViewController: UIViewController {
     
     
     @IBAction func refresh(_ sender: UIButton) {
+        counter = 20
+        countingLabel.text = "20"
+        timer.invalidate()
+        timer = Timer.scheduledTimer(timeInterval: 1, target:self, selector: #selector(Level2ViewController.updateCounter), userInfo: nil, repeats: true)
+        
         flipAllCardsFaceDown()
         deck.shuffle()
         
         score = 0
         scoreLabel.text = "Score: 0"
         
-        counter = 15
-        countingLabel.text = "15"
         
-//        for card in cards { //for each 'card' in cards flip them
-//            card.setBackgroundImage(UIImage(named: "back"), for: .normal)
-//            card.setTitle("?", for: .normal)
-//        }
-//        counter = 0
-//        updateCounter()
-//        imageNames = ["robot1", "robot2", "alien1", "alien2", "mermaid1", "mermaid2", "dragon1", "dragon2", "unicorn1", "unicorn2", "yeti1", "yeti2"]
     }
     
     
@@ -148,37 +143,9 @@ class Level2ViewController: UIViewController {
         }
     }
     
-    func examplesOfFunctions() {
-        // scratchpad to show use of different functions
-        
-        // note how this method would not read well without "title"
-        let newButton = createNewButton(title: "Hello")
-        
-        add(newButton, to: view) // view is self.view
-        // in objective c: [self addButton: newButton toView: self.view] - swift reads more like natural language
-        
-        hide(newButton)
-    }
-    
-    // returns a UIButton instance
-    // -> UIButton indicates the return type
-    func createNewButton(title: String) -> UIButton {
-        let button = UIButton()
-        button.setTitle(title, for: .normal)
-        return button
-    }
-    
-    // using an underscore removes repetition (hide(button: newButton))
-    func hide(_ button: UIButton) {
-        button.isHidden = true
-    }
-    
-    // when used this will be add(button, to: view) but the 'button' and 'view' names give us clear names in the method (rather than to.addSubview(button)
-    func add(_ button: UIButton, to view: UIView) {
-        view.addSubview(button)
-    }
-    
-    @IBAction func nextPage(_ sender: UIButton) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let infoPage = segue.destination as! InfoPage
+        infoPage.passString = "Level 2 Completed! \n \n Level 3 unlocked..."
     }
     
     @IBAction func reveal(_ sender: UIButton) {
@@ -207,8 +174,10 @@ class Level2ViewController: UIViewController {
                     card.matched = true
                 }
                 if score == 6 {
+                    timer.invalidate()
                     print("You win!")
                     nextButton.isHidden = false
+                    countingLabel.text = "You completed level 2 in \(20 - counter) seconds!"
                 }
             } else {
                 print("Better luck next time :(")
@@ -222,50 +191,6 @@ class Level2ViewController: UIViewController {
             selectedCards.append(selectedCard)
         }
         
-        
-        
-//        if previouslySelectedCard == nil  {
-//            flip(sender, faceUp: true)
-//            previouslySelectedCard = selectedCard
-//        } else {
-//            flip(sender, faceUp: true)
-//            
-//            let isMatch = previouslySelectedCard!.imageName == selectedCard.imageName
-//            
-//            if isMatch {
-//                print("We have a match!!")
-//            } else {
-//                print("Better luck next time :(")
-//            }
-//
-//        }
-        
-//        flipCount += 1
-//        flipsLabel.text = "Flips: \(flipCount)"
-//        
-//        if flipCount % 2 == 0 || flipCount == 1 {
-//        } else{
-//            for card in cards { //for each 'card' in cards flip them
-//                card.setBackgroundImage(UIImage(named: "back"), for: .normal)
-//                card.setTitle("?", for: .normal)
-//            }
-//        }
-//        
-//        if imageNames.count == 0 {
-//            imageNames = ["robot1", "robot2", "alien1", "alien2", "mermaid1", "mermaid2", "dragon1", "dragon2", "unicorn1", "unicorn2", "yeti1", "yeti2"]
-//        }
-//        if sender.currentTitle == "?" {
-//            //sender.setBackgroundImage(randomImage(), for: .normal)
-//            let index = cards.index(of: sender)!
-//            let card = deck.cards[index]
-//            let imageName = card.imageName
-//            sender.setBackgroundImage(UIImage(named: imageName), for: .normal)
-//            sender.setTitle("", for: .normal)
-//        }else{
-//            sender.setBackgroundImage(UIImage(named: "back"), for: .normal)
-//            sender.setTitle("?", for: .normal)
-//        }
-//    }
     }
     
     func flipAllCardsFaceDown() {
